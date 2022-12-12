@@ -5,7 +5,7 @@ namespace ProductsAndCategoriesDec.Models;
 public class Product
 {
 
-    [Key] // Primary Key
+    [Key]
 
     public int ProductId { get; set; }
 

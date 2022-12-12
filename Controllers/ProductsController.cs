@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace ProductsAndCategoriesDec.Controllers;
 
-public class ProductsController : Controller //dependancy injection
+public class ProductsController : Controller
     {
     private  MyContext db;
     public ProductsController(MyContext context)
