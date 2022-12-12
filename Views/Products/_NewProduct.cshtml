@@ -1,0 +1,29 @@
+@model Product
+
+<body class="bg-secondary text-light">
+    <div class="text-centered">
+        <h1>New Product</h1>
+    </div>
+
+    <div>
+        <form class="Text-center" asp-action="Create" asp-controller="Products" method="post">
+            <div class="text-center mt-3">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" />
+                <span asp-validation-for="Name" class="error"></span>
+            </div>
+
+            <div class="text-center mt-3">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" />
+                <span asp-validation-for="Description" class="error"></span>
+            </div>
+
+            <div class="text-center mt-3">
+                <label asp-for="Price"></label>
+                <input asp-for="Price" />
+                <span asp-validation-for="Price" class="error"></span>
+            </div>
+        </form>
+    </div>
+</body>

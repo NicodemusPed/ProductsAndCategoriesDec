@@ -1,0 +1,15 @@
+@model List<Product>
+
+<body class="bg-secondary text-light">
+    <div class="text-centered">
+        <h1>All Products</h1>
+    </div>
+@foreach (Product product in Model)
+{
+    <div>
+        <ul>
+            <li><a href="/products/{ProductsId}"></a></li>
+        </ul>
+    </div>
+}
+</body>
