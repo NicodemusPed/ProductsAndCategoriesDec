@@ -7,16 +7,16 @@ namespace ProductsAndCategoriesDec.Controllers;
 
 public class CategoriesController : Controller
     {
-    private  MyContext db;
+    private  MyContext dbcontext;
     public CategoriesController(MyContext context)
     {
-        db = context;
+        dbcontext = context;
     }
 
-    [HttpGet("")]
-    public IActionResult Index()
+    [HttpGet("categories")]
+    public IActionResult Categories()
     {
-        List<Categories> allCategories = db.Categories.ToList();
+        List<Category> allCategories = dbcontext.Categories.ToList();
         return View("Categories", allCategories);
     }
 }

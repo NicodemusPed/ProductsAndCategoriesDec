@@ -6,7 +6,7 @@ public class MyContext : DbContext
 {
     public MyContext(DbContextOptions options) : base(options) { }
 
-    public DbSet<Categories> Categories { get; set; }
+    public DbSet<Category> Categories { get; set; }
 
     public DbSet<Product> Products { get; set; }
 

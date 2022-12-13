@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 namespace ProductsAndCategoriesDec.Models;
 
-public class Categories
+public class Category
 {
 
     [Key] // Primary Key
@@ -18,17 +18,7 @@ public class Categories
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
-    public class Association
-    {
-        [Key]
-        public int AssociationId {get;set;}
-        public int ProductId {get;set;}
-        public int CategoryId {get;set;}
-        public Product Product {get;set;}
-        public Categories Category {get;set;}
-        public DateTime CreatedAt {get;set;} = DateTime.Now;
-        public DateTime UpdatedAt {get;set;} = DateTime.Now;
-    }
+
 
 }
 

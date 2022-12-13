@@ -781,19 +781,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NgjPe\\.nuget\\packages\\": {}
+    "C:\\Users\\Career\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NgjPe\\OneDrive - Goodwill Industries of the Columbia Willamette\\CodingDojo2022\\CsharpDecember2022\\ORMs\\ProductsAndCategoriesDec\\ProductsAndCategoriesDec.csproj",
+      "projectUniqueName": "C:\\Users\\Career\\OneDrive-B\\OneDrive - Goodwill Industries of the Columbia Willamette\\CodingDojo2022\\CsharpDecember2022\\ORMs\\ProductsAndCategoriesDec\\ProductsAndCategoriesDec.csproj",
       "projectName": "ProductsAndCategoriesDec",
-      "projectPath": "C:\\Users\\NgjPe\\OneDrive - Goodwill Industries of the Columbia Willamette\\CodingDojo2022\\CsharpDecember2022\\ORMs\\ProductsAndCategoriesDec\\ProductsAndCategoriesDec.csproj",
-      "packagesPath": "C:\\Users\\NgjPe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NgjPe\\OneDrive - Goodwill Industries of the Columbia Willamette\\CodingDojo2022\\CsharpDecember2022\\ORMs\\ProductsAndCategoriesDec\\obj\\",
+      "projectPath": "C:\\Users\\Career\\OneDrive-B\\OneDrive - Goodwill Industries of the Columbia Willamette\\CodingDojo2022\\CsharpDecember2022\\ORMs\\ProductsAndCategoriesDec\\ProductsAndCategoriesDec.csproj",
+      "packagesPath": "C:\\Users\\Career\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Career\\OneDrive-B\\OneDrive - Goodwill Industries of the Columbia Willamette\\CodingDojo2022\\CsharpDecember2022\\ORMs\\ProductsAndCategoriesDec\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\NgjPe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Career\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
