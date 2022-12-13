@@ -1,9 +1,7 @@
 @model Product
 
 <body class="bg-secondary text-light">
-    <div class="text-centered">
-        <h1>New Product</h1>
-    </div>
+
 
     <div>
         <form class="Text-center" asp-action="Create" asp-controller="Products" method="post">
@@ -24,6 +22,7 @@
                 <input asp-for="Price" />
                 <span asp-validation-for="Price" class="error"></span>
             </div>
+                <input type="submit" value="Enter" class="btn btn-outline-light m-3"></input>
         </form>
     </div>
 </body>

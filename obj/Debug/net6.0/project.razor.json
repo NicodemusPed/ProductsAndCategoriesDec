@@ -16303,6 +16303,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Career\\OneDrive-B\\OneDrive - Goodwill Industries of the Columbia Willamette\\CodingDojo2022\\CsharpDecember2022\\ORMs\\ProductsAndCategoriesDec\\Views\\Products\\Index.cshtml",
+      "TargetPath": "Views\\Products\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Career\\OneDrive-B\\OneDrive - Goodwill Industries of the Columbia Willamette\\CodingDojo2022\\CsharpDecember2022\\ORMs\\ProductsAndCategoriesDec\\Views\\Products\\_NewProduct.cshtml",
       "TargetPath": "Views\\Products\\_NewProduct.cshtml",
       "FileKind": "mvc"
