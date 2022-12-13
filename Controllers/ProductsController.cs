@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using ProductsAndCategoriesDec.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +17,13 @@ public class ProductsController : Controller
     public IActionResult Index()
     {
         List<Product> allProducts = dbcontext.Products.ToList();
-        return View("Products", allProducts);
+        return View(allProducts);
+    }
+
+    [HttpPost("product/create")]
+    public IActionResult NewProduct(Product newProduct)
+    {
+        
     }
 }
 

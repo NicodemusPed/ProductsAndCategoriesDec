@@ -1,7 +1,6 @@
-using ProductsAndCategoriesDec.Models;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
+using ProductsAndCategoriesDec.Models;
 
 namespace ProductsAndCategoriesDec.Controllers;
 
@@ -17,7 +16,7 @@ public class CategoriesController : Controller
     public IActionResult Categories()
     {
         List<Category> allCategories = dbcontext.Categories.ToList();
-        return View("Categories", allCategories);
+        return View("_Categories", allCategories);
     }
 }
 

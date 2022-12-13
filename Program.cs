@@ -1,8 +1,9 @@
-using ProductsAndCategoriesDec.Models;
 using Microsoft.EntityFrameworkCore;
+using ProductsAndCategoriesDec.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 

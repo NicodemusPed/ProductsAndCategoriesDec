@@ -1,14 +1,17 @@
-﻿
+﻿@model List<Product>
 
 <div class="text-center d-flex justify-content-around">
   <div class="flex-1">
     <h2 class="mt-5 mb-4">New Product</h2>
-      @await Html.PartialAsync("_NewProduct")
+    @{
+      Product product= new Product();
+    }
+      @await Html.PartialAsync("_NewProduct", product)
     </div>
 
     <div class="flex-1">
       <h2 class="mt-5 mb-4">All Products</h2>
-      @await Html.PartialAsync("_AllProducts")
+      @await Html.PartialAsync("_AllProducts", Model)
     </div>
   </div>
 </div>
