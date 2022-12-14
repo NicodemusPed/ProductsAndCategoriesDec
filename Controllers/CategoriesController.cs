@@ -1,3 +1,8 @@
+// include this using statement at the top of your controller file
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+
+
 #pragma warning disable CS8618
 
 using Microsoft.AspNetCore.Mvc;
@@ -39,10 +44,10 @@ public class CategoriesController : Controller
         return RedirectToAction("Index");
     }
 
-    [HttpPost("products/addproduct")]
-    public IActionResult AddCategory(Association association)
+    [HttpPost("categories/addproduct")]
+    public IActionResult AddProduct(Association association)
     {
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             dbcontext.Associations.Add(association);
             dbcontext.SaveChanges();
@@ -51,15 +56,19 @@ public class CategoriesController : Controller
         return OneCategory(association.CategoryId);
     }
 
-    [HttpPost("categories/{id}")]
+    [HttpGet("categories/{id}")]
     public IActionResult OneCategory(int id)
     {
-    Category? category = dbcontext.Categories
-        .Include(p => p.AssociatedProducts)
-        .ThenInclude(a => a.Product)
-        .FirstOrDefault(p => p.CategoryId == id);
+        Category? category = dbcontext.Categories
+            .Include(p => p.AssociatedProducts)
+            .ThenInclude(a => a.Product)
+            .FirstOrDefault(c => c.CategoryId == id);
 
-        ViewBag.allProducts = dbcontext.Products.OrderBy(c => c.ProductId == id).ToList();
+        // this only allows categories to be listed once in the list.
+        ViewBag.nonProducts = dbcontext.Products
+            .Include(p => p.AssociatedCategories)
+            .Where(p => p.AssociatedCategories.All(p => p.CategoryId != id)).OrderBy(p => p.Name).ToList();
+
         return View("OneCategory", category);
     }
 }

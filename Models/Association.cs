@@ -6,11 +6,12 @@ public class Association
 {
 
     [Key] // Primary Key
-
     public int AssociationId { get; set; }
 
+    [Required]
     public int ProductId { get; set; }
 
+    [Required]
     public int CategoryId { get; set; }
 
     public Product? Product { get; set; }

@@ -42,7 +42,7 @@ public class ProductsController : Controller
     [HttpPost("products/addcategory")]
     public IActionResult AddCategory(Association association)
     {
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             dbcontext.Associations.Add(association);
             dbcontext.SaveChanges();
@@ -56,11 +56,15 @@ public class ProductsController : Controller
     public IActionResult OneProduct(int id)
     {
         Product? product = dbcontext.Products
-            .Include(p => p.AssociatedCategories)
+            .Include(c => c.AssociatedCategories)
             .ThenInclude(a => a.Category)
             .FirstOrDefault(p => p.ProductId == id);
 
-        ViewBag.allCategories = dbcontext.Categories.OrderBy(p => p.Name).ToList();
+        // this only allows categories to be listed once in the list.
+        ViewBag.nonCategories = dbcontext.Categories
+            .Include(p => p.AssociatedProducts)
+            .Where(p => p.AssociatedProducts.All(p => p.ProductId != id)).OrderBy(p => p.Name).ToList();
+
         return View("OneProduct", product);
     }
 }

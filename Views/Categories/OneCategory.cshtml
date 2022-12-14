@@ -1,10 +1,13 @@
 @model Category
+
+<div class="text-center">
 <h1>@Model.Name</h1>
+</div>
 
 <ul>
     @foreach (Association a in Model.AssociatedProducts)
     {
-        <li>@a.Product.Name</li>
+        <li >@a.Product.Name</li>
     }
 </ul>
 
@@ -12,7 +15,7 @@
     Association association = new Association();
     association.CategoryId = Model.CategoryId;
 }
-@await Html.PartialAsync("_AddProduct", association)
+@await Html.PartialAsync("_AddProducts", association)
 
 
 
