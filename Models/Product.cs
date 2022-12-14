@@ -22,7 +22,7 @@ public class Product
     [Display (Name = "Price:")]
     public Decimal Price { get; set; }
 
-    public List<Association> AssociatedProducts { get; set; } = new List<Association>();
+    public List<Association> AssociatedCategories { get; set; } = new List<Association>();
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;

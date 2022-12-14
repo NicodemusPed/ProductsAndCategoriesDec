@@ -1,0 +1,18 @@
+@model Product
+<h1>@Model.Name</h1>
+
+<ul>
+    @foreach (Association a in Model.AssociatedCategories)
+    {
+        <li>@a.Category.Name</li>
+    }
+</ul>
+
+@{
+    Association association = new Association();
+    association.ProductId = Model.ProductId;
+}
+@await Html.PartialAsync("_AddCategory", association)
+
+
+

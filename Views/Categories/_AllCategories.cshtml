@@ -1,19 +1,14 @@
-@model Category
+@model List<Category>
 
-<div class="head">
-    <h1>@ViewBag.ThisCategory.Name</h1>
-    <a class="backLink" href="/categories">Back</a>
-</div>
-<div class="left">
-    <h2>Products:</h2>
-    <ul>
-        @if (ViewBag.CategoryWithProducts != null)
-        {
-            @foreach (var p in ViewBag.CategoryWithProducts.AssocProds)
-            {
-                <li>@p.Product.Name</li>
-            }
-        }
-    </ul>
-</div>
+<body class="bg-secondary text-light">
+
+@foreach (Category category in Model)
+{
+    <div>
+        <ul>
+            <li><a class="text-light" href="/categories/@category.CategoryId">@category.Name</a></li>
+        </ul>
+    </div>
+}
+</body>
 

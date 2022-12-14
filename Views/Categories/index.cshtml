@@ -1,0 +1,20 @@
+@model List<Category>
+
+<div class="text-center d-flex justify-content-around">
+  <div class="flex-1">
+    <h2 class="mt-5 mb-4 text-light">New Category</h2>
+    @{
+      Category category= new Category();
+    }
+      @await Html.PartialAsync("_NewCategories", category)
+    </div>
+
+    <div class="flex-1">
+      <h2 class="mt-5 mb-4 text-light">All Categories</h2>
+      @await Html.PartialAsync("_AllCategories", Model)
+    </div>
+  </div>
+</div>
+
+
+
